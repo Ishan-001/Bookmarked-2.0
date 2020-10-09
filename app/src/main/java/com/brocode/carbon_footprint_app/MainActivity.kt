@@ -3,6 +3,7 @@ package com.brocode.carbon_footprint_app
 import android.app.Activity
 import android.content.Intent
 import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
@@ -28,8 +29,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if(requestCode== REQUEST_CODE && resultCode== Activity.RESULT_OK){
-            val takenImage= data?.extras?.get("data") as Bitmap
+            val takenImage= BitmapFactory.decodeFile(photofile.absolutePath)
             imageView.setImageBitmap(takenImage)
+            imageView.rotation= 90F
         }else{
             super.onActivityResult(requestCode, resultCode, data)
         }
