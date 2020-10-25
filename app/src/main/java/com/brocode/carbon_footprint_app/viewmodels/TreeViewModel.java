@@ -14,13 +14,13 @@ import java.util.List;
 public class TreeViewModel extends ViewModel {
 
     private MutableLiveData<List<Tree>> mTrees;
-    private MutableLiveData<Boolean> mIsUpdating = new MutableLiveData<>();
+    private TreeRepository mRepo;
 
     public void init(){
         if(mTrees != null){
             return;
         }
-        TreeRepository mRepo = TreeRepository.getInstance();
+        mRepo = TreeRepository.getInstance();
         mTrees = mRepo.getTrees();
     }
 

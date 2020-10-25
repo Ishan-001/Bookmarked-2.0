@@ -55,7 +55,6 @@
         android:id="@+id/imageView8"
         android:layout_width="133dp"
         android:layout_height="145dp"
-        android:src="@drawable/tree1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

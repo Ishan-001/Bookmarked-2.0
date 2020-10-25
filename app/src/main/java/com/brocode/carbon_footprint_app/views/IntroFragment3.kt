@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
+import com.brocode.carbon_footprint_app.LoginActivity
 import com.brocode.carbon_footprint_app.MainActivity
 import com.brocode.carbon_footprint_app.R
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -28,7 +29,7 @@ class IntroFragment3() : Fragment() {
     ): View? {
         val root=inflater.inflate(R.layout.layout_intro3, container, false)
 
-        root.get_started.setOnClickListener { startActivity(Intent(context, MainActivity::class.java)) }
+        root.get_started.setOnClickListener { startActivity(Intent(context, LoginActivity::class.java)) }
 
         return root
     }
