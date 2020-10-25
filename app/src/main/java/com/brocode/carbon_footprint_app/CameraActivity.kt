@@ -24,9 +24,7 @@ class CameraActivity : AppCompatActivity() {
 
         supportFragmentManager.beginTransaction().replace(R.id.container, ShelterFragment()).commit()
 
-        capture.setOnClickListener {
-            handleImageCapture()
-        }
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

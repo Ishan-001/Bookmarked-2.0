@@ -11,6 +11,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activtiy_main)
 
+        replace(HomeFragment())
+
         home.setOnClickListener{ replace(HomeFragment()) }
         activities.setOnClickListener { replace(ActivitiesFragment()) }
         detect.setOnClickListener { replace(DetectFragment()) }
